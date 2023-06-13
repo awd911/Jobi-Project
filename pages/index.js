@@ -62,9 +62,7 @@ const Home = () => {
     <Link href="/searchError" >
           <h2>ErrorScreen &rarr;</h2>
         </Link> 
-      <Link href="/jobDetails" >
-          <h2>Job Details &rarr;</h2>
-        </Link>
+
   </div>
 
   )

@@ -22,10 +22,13 @@ const searchResults = () =>{
     //creates the router to access the current URL
     const router = useRouter()
     
-    function Job(id, title, location) {
+    function Job(id, title, location,type,wage,description) {
         this.id = id;
         this.title = title;
         this.location = location;
+        this.type = type;
+        this.wage = wage;
+        this.description = description;
       }
 
 
@@ -46,16 +49,12 @@ const searchResults = () =>{
             jobs.forEach(element => {
                 
                 //creates a job object from each job in the database
-                let currJob = new Job(element.id,element.title,element.location);
+                let currJob = new Job(element.id,element.title,element.location,element.type,element.wage,element.description);
 
                 console.log (searchString, " - COMPARE - ",element.title," Result: ",(searchString === element.title) )
-                //if (searchString === element.title){
+   
                 setInfo(jobs);
-                    //setStateFunction(currJob);
 
-                    //Determines if the user was able to retrieve any results
-                    
-                //}
                 // Pushes the Jobs into the Info Array of Job objects
 
             })
